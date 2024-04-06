@@ -2,6 +2,7 @@ package com.datee.datemaze.calendar.entity;
 
 import com.datee.datemaze.couple.entity.Couple;
 import com.datee.datemaze.dateSchedule.entity.DateSchedule;
+import com.datee.datemaze.schedule.entity.Schedule;
 import com.datee.datemaze.util.BaseEntity;
 
 import jakarta.persistence.*;
@@ -37,5 +38,9 @@ public class Calendar extends BaseEntity {
 
     @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "cal_no")
-    private List<DateSchedule> dateScheduleList;
+    private List<Schedule> scheduleList; // 개인 일정 목록
+
+    @OneToMany(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "cal_no")
+    private List<DateSchedule> dateScheduleList; // 커플 일정 목록
 }

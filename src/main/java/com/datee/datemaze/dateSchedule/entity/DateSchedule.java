@@ -50,5 +50,5 @@ public class DateSchedule {
 
     @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "dsch_no")
-    private List<Comment> commentList;
+    private List<Comment> commentList; // 댓글 목록
 }
