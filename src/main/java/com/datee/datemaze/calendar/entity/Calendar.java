@@ -1,17 +1,17 @@
 package com.datee.datemaze.calendar.entity;
 
 import com.datee.datemaze.couple.entity.Couple;
+import com.datee.datemaze.dateSchedule.entity.DateSchedule;
 import com.datee.datemaze.util.BaseEntity;
-
 import jakarta.persistence.*;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+
+import java.util.List;
 
 @Entity
 @Builder
@@ -31,4 +31,8 @@ public class Calendar extends BaseEntity {
     @OneToOne
     @JoinColumn(name = "couple_no")
     private Couple couple; // 커플
+
+    @OneToMany(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "cal_no")
+    private List<DateSchedule> dateScheduleList;
 }
