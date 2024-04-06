@@ -43,4 +43,8 @@ public class Calendar extends BaseEntity {
     @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "cal_no")
     private List<DateSchedule> dateScheduleList; // 커플 일정 목록
+
+    @OneToMany(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "cal_no")
+    private List<Anniversary> anniversaryList; // 기념일 목록
 }

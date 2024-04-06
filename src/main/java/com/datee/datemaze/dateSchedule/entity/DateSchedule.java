@@ -1,5 +1,7 @@
 package com.datee.datemaze.dateSchedule.entity;
 
+import com.datee.datemaze.util.BaseEntity;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
@@ -23,7 +25,7 @@ import java.util.List;
 @DynamicInsert
 @DynamicUpdate
 /* 커플 일정 entity */
-public class DateSchedule {
+public class DateSchedule extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "dsch_no")

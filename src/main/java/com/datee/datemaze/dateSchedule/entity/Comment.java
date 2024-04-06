@@ -1,6 +1,7 @@
 package com.datee.datemaze.dateSchedule.entity;
 
 import com.datee.datemaze.member.entity.Member;
+import com.datee.datemaze.util.BaseEntity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -24,7 +25,7 @@ import java.util.Date;
 @DynamicInsert
 @DynamicUpdate
 /* 댓글 entity */
-public class Comment {
+public class Comment extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_no")
