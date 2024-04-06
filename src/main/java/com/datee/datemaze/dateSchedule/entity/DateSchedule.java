@@ -2,12 +2,10 @@ package com.datee.datemaze.dateSchedule.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -50,5 +48,5 @@ public class DateSchedule {
 
     @OneToMany(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "dsch_no")
-    private List<Comment> commentList;
+    private List<Comment> commentList; // 댓글 목록
 }
