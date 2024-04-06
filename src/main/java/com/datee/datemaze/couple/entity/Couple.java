@@ -1,18 +1,19 @@
 package com.datee.datemaze.couple.entity;
 
-
 import com.datee.datemaze.util.BaseEntity;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import java.util.Date;
-
 
 @Entity
 @Builder
@@ -42,9 +43,9 @@ public class Couple extends BaseEntity {
     @NotNull
     private Long member2No; // 회원2 번호
 
-//    @Column(name = "cal_no")
-//    @NotNull
-//    private Long calNo; // 캘린더 번호
+    //    @Column(name = "cal_no")
+    //    @NotNull
+    //    private Long calNo; // 캘린더 번호
 
     @Column(name = "couple_date")
     @NotNull
