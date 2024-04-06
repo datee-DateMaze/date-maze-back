@@ -3,12 +3,15 @@ package com.datee.datemaze.couple.entity;
 import com.datee.datemaze.calendar.entity.Calendar;
 import com.datee.datemaze.member.entity.Member;
 import com.datee.datemaze.util.BaseEntity;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
