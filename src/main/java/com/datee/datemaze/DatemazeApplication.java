@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DatemazeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DatemazeApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(DatemazeApplication.class, args);
+    }
 }
